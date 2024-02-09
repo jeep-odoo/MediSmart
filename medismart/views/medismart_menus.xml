@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="medismart_root_menu" name="MediSmart">
+        <menuitem id="medismart_first_level_menu_data" name="Data">
+            <menuitem id="medismart_patient_menu" action="medismart_patient_action"/>
+            <menuitem id="medismart_doctor_menu" action="medismart_doctor_action"/>
+            <menuitem id="medismart_bed_menu" action="medismart_bed_action"/>
+        </menuitem>
+        <menuitem id="medismart_first_level_menu_appointments" name="Appointments">
+            <menuitem id="medismart_appointment_menu" action="medismart_appointment_action"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>

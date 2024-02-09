@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action -->
+    <record id="medismart_patient_action" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">medismart.patient</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No Data. Let's create some!
+          </p>
+        </field>
+    </record>
+    <!-- tree view of all patients -->
+    <record id="medismart_patients_view_tree" model="ir.ui.view">
+        <field name="name">medismart.patient.tree</field>
+        <field name="model">medismart.patient</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name"/>
+                <field name="admission_date"/>
+                <field name="discharge_date"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+    <!-- form view of properties -->
+    <record id="estate_patients_view_form" model="ir.ui.view">
+        <field name="name">medismart.patient.form</field>
+        <field name="model">medismart.patient</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <group>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="2">
+                            <group cols="1">
+                                <field name="age"/>
+                                <field name="gender"/>
+                            </group>
+                            <group cols="1">
+                                <field name="phone"/>
+                                <field name="email"/>
+                            </group>
+                        </group>
+                    </group>
+                    <!-- Description Tab -->
+                    <notebook>
+                        <page string="More Information">
+                            <group>
+                                <field name="weight"/>
+                                <field name="height"/>
+                                <field name="admission_date"/>
+                                <field name="discharge_date"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="activity_ids"/>
+                    <field name="activity_state"/>
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- Search View -->
+    <record id="estate_patients_search" model="ir.ui.view">
+        <field name="name">medismart.patient.search</field>
+        <field name="model">medismart.patient</field>
+        <field name="arch" type="xml">
+            <search string="Patient Search">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="medical_history"/>
+                <field name="weight"/>
+                <field name="height"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="admission_date"/>
+                <field name="discharge_date"/>
+                <!-- filters -->
+                <filter string="Children" name="age" domain="[('age','&lt;','18')]"/>
+                <filter string="Adults" name="age" domain="[('age','>','18')]"/>
+                <!-- group by -->
+                <filter name="age" string="Age" context="{'group_by': 'age'}" />
+                <filter name="admission_date" string="Admission Date" context="{'group_by': 'admission_date'}" />
+            </search>
+        </field>
+    </record>
+</odoo>
