@@ -4,10 +4,12 @@ from odoo import fields, models
 class medismartAppointment(models.Model):
     _name = "medismart.appointment"
     _description = "medismart appointment model"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
 
     #link with a patient
     #link with a doctor
-    date = fields.Datetime(default=fields.Datetime.now(), string='Date')
+    date = fields.Datetime(default=fields.Datetime.now(), string='Date',tracking=True)
     purpose = fields.Selection(
         string='Purpose',
         selection=[
@@ -18,7 +20,8 @@ class medismartAppointment(models.Model):
             ('surgery', 'Surgery')
         ],
         required=True,
-        default='general_checkup'
+        default='general_checkup',
+        tracking=True
     )
     status = fields.Selection(
         string='Status',
@@ -29,5 +32,6 @@ class medismartAppointment(models.Model):
             ('cancelled', 'Cancelled')
         ],
         required=True,
-        default='upcoming'
+        default='upcoming',
+        tracking=True
     )

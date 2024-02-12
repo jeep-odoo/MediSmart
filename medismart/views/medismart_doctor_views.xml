@@ -12,7 +12,7 @@
         </field>
     </record>
     <!-- tree view of all doctors -->
-    <record id="medismart_doctores_view_tree" model="ir.ui.view">
+    <record id="medismart_doctors_view_tree" model="ir.ui.view">
         <field name="name">medismart.doctor.tree</field>
         <field name="model">medismart.doctor</field>
         <field name="arch" type="xml">
@@ -32,7 +32,7 @@
         <field name="name">medismart.doctor.form</field>
         <field name="model">medismart.doctor</field>
         <field name="arch" type="xml">
-            <form string="Property">
+            <form string="Doctors">
                 <sheet>
                     <group>
                         <h1>

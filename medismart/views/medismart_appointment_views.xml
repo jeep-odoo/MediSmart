@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Action -->
     <record id="medismart_appointment_action" model="ir.actions.act_window">
         <field name="name">Appointments</field>
         <field name="res_model">medismart.appointment</field>
@@ -8,6 +9,57 @@
             <p class="o_view_nocontent_smiling_face">
             No Data. Let's create some!
           </p>
+        </field>
+    </record>
+    <!-- tree view of all appointments -->
+    <record id="medismart_appointments_view_tree" model="ir.ui.view">
+        <field name="name">medismart.appointment.tree</field>
+        <field name="model">medismart.appointment</field>
+        <field name="arch" type="xml">
+            <tree string="appointments">
+                <field name="date"/>
+                <field name="purpose"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <!-- form view of appointments -->
+    <record id="medismart_appointments_view_form" model="ir.ui.view">
+        <field name="name">medismart.appointment.form</field>
+        <field name="model">medismart.appointment</field>
+        <field name="arch" type="xml">
+            <form string="appointments">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="purpose"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="activity_ids"/>
+                    <field name="activity_state"/>
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- Search View -->
+    <record id="medismart_appointments_search" model="ir.ui.view">
+        <field name="name">medismart.appointment.search</field>
+        <field name="model">medismart.appointment</field>
+        <field name="arch" type="xml">
+            <search string="appointment Search">
+                <field name="date"/>
+                <field name="purpose"/>
+                <field name="status"/>
+                <!-- filter -->
+                <filter string="General Checkups" name="purpose" domain="[('purpose','=','general_checkup')]"/>
+                <!-- group by -->
+                <filter name="status" string="Status" context="{'group_by': 'status'}" />
+            </search>
         </field>
     </record>
 </odoo>

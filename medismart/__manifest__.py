@@ -3,8 +3,7 @@
     'version': '1.0',
     'depends': ['base', 'mail'],
     'author': "jeep-odoo",
-    'application': True,
-    'installable': True,
+    'icon' : "assets/icon.png",
     'data': [
         'security/ir.model.access.csv',
         'views/medismart_patient_views.xml',
@@ -13,4 +12,7 @@
         'views/medismart_appointment_views.xml',
         'views/medismart_menus.xml',
         ],
+    'application': True,
+    'installable': True,
+    "license" : "LGPL-3",
 }

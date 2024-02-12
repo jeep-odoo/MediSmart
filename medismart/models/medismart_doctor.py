@@ -6,15 +6,16 @@ class medismartDoctor(models.Model):
     _description = "medismart doctor model"
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(required=True, string='Name')
-    age = fields.Integer(required=True, string='Age (in years)')
+    name = fields.Char(required=True, string='Name', tracking=True)
+    age = fields.Integer(required=True, string='Age (in years)',tracking=True)
     gender = fields.Selection(
         string='Gender',
         selection=[('male', 'Male'), ('female', 'Female'), ('other', 'Other')],
         required=True,
-        copy=False
+        copy=False,
+        tracking=True
     )
-    experience = fields.Integer(string='Experience (in yrs)')
-    phone = fields.Char(string='Phone')
-    email = fields.Char(string='Email')
-    specialization = fields.Char(string='Specialization')
+    experience = fields.Integer(string='Experience (in yrs)',tracking=True)
+    phone = fields.Char(string='Phone', tracking=True)
+    email = fields.Char(string='Email',tracking=True)
+    specialization = fields.Char(string='Specialization',tracking=True)
