@@ -24,6 +24,8 @@
                 <field name="phone"/>
                 <field name="email"/>
                 <field name="specialization"/>
+                <field name="consultation_fee"/>
+                <field name="availability"/>
             </tree>
         </field>
     </record>
@@ -55,6 +57,8 @@
                                 <field name="specialization"/>
                                 <field name="experience"/>
                                 <field name="age"/>
+                                <field name="consultation_fee"/>
+                                <field name="availability"/>
                             </group>
                         </page>
                     </notebook>
@@ -82,8 +86,10 @@
                 <field name="phone"/>
                 <field name="email"/>
                 <field name="specialization"/>
+                <field name="consultation_fee"/>
+                <field name="availability"/>
                 <!-- filter -->
-                <filter string="More Expereinced" name="experience" domain="[('experience','&gt;','5')]"/>
+                <filter string="More Experienced" name="experience" domain="[('experience','&gt;','5')]"/>
                 <!-- group by -->
                 <filter name="specialization" string="Specialization" context="{'group_by': 'specialization'}" />
             </search>
