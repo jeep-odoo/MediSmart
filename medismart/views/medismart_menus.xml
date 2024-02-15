@@ -2,12 +2,12 @@
 <odoo>
     <menuitem id="medismart_root_menu" name="MediSmart" web_icon="medismart,assets/icon.png">
         <menuitem id="medismart_first_level_menu_data" name="Data">
-            <menuitem id="medismart_patient_menu" action="medismart_patient_action"/>
-            <menuitem id="medismart_doctor_menu" action="medismart_doctor_action"/>
-            <menuitem id="medismart_bed_menu" action="medismart_bed_action"/>
+            <menuitem id="medismart_patient_menu" name="Patients" action="medismart_patient_action"/>
+            <menuitem id="medismart_doctor_menu" name="Doctors" action="medismart_doctor_action"/>
         </menuitem>
-        <menuitem id="medismart_first_level_menu_appointments" name="Appointments">
-            <menuitem id="medismart_appointment_menu" action="medismart_appointment_action"/>
+        <menuitem id="medismart_first_level_menu_appointments" name="Settings">
+            <menuitem id="medismart_appointment_menu" name="Appointments" action="medismart_appointment_action"/>
+            <menuitem id="medismart_specialization_menu" name="Specializations" action="medismart_specialization_action"/>            
         </menuitem>
     </menuitem>
 </odoo>

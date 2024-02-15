@@ -11,25 +11,14 @@ class medismartPatient(models.Model):
     age = fields.Integer(required=True, string="Age (in years)", tracking=True)
     gender = fields.Selection(
         string="Gender",
-        selection=[("male", "Male"), ("female", "Female"), ("other", "Other")],
-        required=True,
+        selection=[("male", "Male"), ("female", "Female")],
         copy=False,
         tracking=True,
     )
-    medical_history = fields.Text(string="Medical History", tracking=True)
-    weight = fields.Float(string="Height(in cm)", tracking=True)
-    height = fields.Float(string="Weight(in kg)", tracking=True)
+    address = fields.Char(string="Address", copy=False, tracking=True)
     phone = fields.Char(string="Phone", tracking=True)
     email = fields.Char(string="Email", tracking=True)
-    is_admitted = fields.Boolean(string="Is Admitted ?")
-    admission_date = fields.Date(
-        default=fields.Date.today(), string="Admission Date", tracking=True
-    )
-    discharge_date = fields.Date(
-        default=fields.Date.today() + relativedelta(days=3),
-        string="Discharge Date",
-        tracking=True,
-    )
-    last_visit_date = fields.Date(
-        string="Last Visit Date"
-    )  # want this to be set from appointment model . the latest appointment to be automatically populated here
+    notes = fields.Text(
+        string="Additonal Notes", tracking=True
+    )  # Only doctor should access this
+    patient_appointment_ids = fields.One2many("medismart.appointment","patient_id", string=" " )

@@ -16,14 +16,14 @@
         <field name="name">medismart.patient.tree</field>
         <field name="model">medismart.patient</field>
         <field name="arch" type="xml">
-            <tree string="Channel">
+            <tree>
                 <field name="name"/>
-                <field name="admission_date"/>
-                <field name="discharge_date"/>
                 <field name="age"/>
-                <field name="gender"/>
                 <field name="phone"/>
+                <field name="address"/>
+                <field name="gender"/>
                 <field name="email"/>
+                <field name="notes" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -32,31 +32,31 @@
         <field name="name">medismart.patient.form</field>
         <field name="model">medismart.patient</field>
         <field name="arch" type="xml">
-            <form string="Property">
+            <form >
                 <sheet>
                     <group>
                         <h1>
+                            <label for="name">Name</label>
                             <field name="name"/>
                         </h1>
                         <group colspan="2">
                             <group cols="1">
                                 <field name="age"/>
                                 <field name="gender"/>
+                                <field name="notes"/>
                             </group>
                             <group cols="1">
                                 <field name="phone"/>
                                 <field name="email"/>
+                                <field name="address"/>
                             </group>
                         </group>
                     </group>
-                    <!-- Description Tab -->
+                    <!-- Prev Appointments Tab Tab -->
                     <notebook>
-                        <page string="More Information">
+                        <page string="Previous Appointments">
                             <group>
-                                <field name="weight"/>
-                                <field name="height"/>
-                                <field name="admission_date"/>
-                                <field name="discharge_date"/>
+                                <field name="patient_appointment_ids" />
                             </group>
                         </page>
                     </notebook>
@@ -76,23 +76,19 @@
         <field name="name">medismart.patient.search</field>
         <field name="model">medismart.patient</field>
         <field name="arch" type="xml">
-            <search string="Patient Search">
+            <search>
                 <field name="name"/>
                 <field name="age"/>
-                <field name="gender"/>
-                <field name="medical_history"/>
-                <field name="weight"/>
-                <field name="height"/>
                 <field name="phone"/>
+                <field name="address"/>
+                <field name="gender"/>
                 <field name="email"/>
-                <field name="admission_date"/>
-                <field name="discharge_date"/>
+                <field name="notes"/>
                 <!-- filters -->
                 <filter string="Children" name="age" domain="[('age','&lt;','18')]"/>
                 <filter string="Adults" name="age" domain="[('age','>','18')]"/>
                 <!-- group by -->
                 <filter name="age" string="Age" context="{'group_by': 'age'}" />
-                <filter name="admission_date" string="Admission Date" context="{'group_by': 'admission_date'}" />
             </search>
         </field>
     </record>

@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 medismart.access_medismart_patient,access_medismart_patient,medismart.model_medismart_patient,base.group_user,1,1,1,1
 medismart.access_medismart_doctor,access_medismart_doctor,medismart.model_medismart_doctor,base.group_user,1,1,1,1
-medismart.access_medismart_bed,access_medismart_bed,medismart.model_medismart_bed,base.group_user,1,1,1,1
 medismart.access_medismart_appointment,access_medismart_appointment,medismart.model_medismart_appointment,base.group_user,1,1,1,1
+medismart.access_medismart_specialization,access_medismart_specialization,medismart.model_medismart_specialization,base.group_user,1,1,1,1

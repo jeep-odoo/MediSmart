@@ -6,9 +6,10 @@ class medismartAppointment(models.Model):
     _description = "medismart appointment model"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    # link with a patient
-    # link with a doctor
-    date = fields.Datetime(default=fields.Datetime.now(), string="Date", tracking=True)
+
+    patient_id = fields.Many2one("medismart.patient", string="Patient", required=True)
+    doctor_id = fields.Many2one("medismart.doctor", string="Doctor", required=True)
+    appointment_date = fields.Datetime(default=fields.Datetime.now(), string="Date", tracking=True)
     purpose = fields.Selection(
         string="Purpose",
         selection=[
@@ -25,12 +26,13 @@ class medismartAppointment(models.Model):
     status = fields.Selection(
         string="Status",
         selection=[
-            ("upcoming", "Upcoming"),
-            ("ongoing", "Ongoing"),
-            ("completed", "Completed"),
-            ("cancelled", "Cancelled"),
+            ("draft", "Draft"),
+            ("confirm", "Confirmed"),
+            ("done", "Done"),
+            ("cancel", "Canceled"),
         ],
         required=True,
-        default="upcoming",
+        default="draft",
         tracking=True,
     )
+    appointment_note = fields.Text(string = "Note")

@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class medismartDoctor(models.Model):
@@ -26,27 +26,7 @@ class medismartDoctor(models.Model):
         tracking=True,
         required=True,
     )
-    specialization = fields.Selection(
-        string="Specialization",
-        selection=[
-            ("general_practitioner", "General Practitioner"),
-            ("internal_medicine", "Internal Medicine"),
-            ("pediatrics", "Pediatrics"),
-            ("obstetrics_gynecology", "Obstetrics and Gynecology"),
-            ("cardiology", "Cardiology"),
-            ("orthopedics", "Orthopedics"),
-            ("dermatology", "Dermatology"),
-            ("ophthalmology", "Ophthalmology"),
-            ("neurology", "Neurology"),
-            ("psychiatry", "Psychiatry"),
-            ("surgery", "Surgery"),
-            ("oncology", "Oncology"),
-            ("endocrinology", "Endocrinology"),
-            ("pulmonology", "Pulmonology"),
-            ("urology", "Urology"),
-        ],
-        tracking=True,
-    )
+    specialization_id = fields.Many2one("medismart.specialization", string="Specialization", tracking=True)
     consultation_fee = fields.Float(string="Consultation Fee", tracking=True)
     availability = fields.Selection(
         string="Availability",
@@ -59,3 +39,18 @@ class medismartDoctor(models.Model):
         required=True,
         tracking=True,
     )
+    joining_date = fields.Date(string="Joining Date", tracking=True)
+    appointment_ids = fields.One2many("medismart.appointment", "doctor_id", string=" ")
+    confirmed_appointment_ids = fields.One2many(
+        "medismart.appointment",
+        compute="_compute_confirmed_appointments",
+        string="Confirmed Appointments"
+    )
+
+    # filtering only the confirmed appointments
+    @api.depends('appointment_ids')
+    def _compute_confirmed_appointments(self):
+        for doctor in self:
+            doctor.confirmed_appointment_ids = doctor.appointment_ids.filtered(
+                lambda appointment: appointment.status == 'confirm'
+            )

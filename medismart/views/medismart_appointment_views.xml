@@ -17,9 +17,12 @@
         <field name="model">medismart.appointment</field>
         <field name="arch" type="xml">
             <tree string="appointments">
-                <field name="date"/>
+                <field name="appointment_date"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
                 <field name="purpose"/>
                 <field name="status"/>
+                <field name="appointment_note" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -31,9 +34,12 @@
             <form string="appointments">
                 <sheet>
                     <group>
-                        <field name="date"/>
+                        <field name="appointment_date"/>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
                         <field name="purpose"/>
                         <field name="status"/>
+                        <field name="appointment_note" optional="hide"/>
                     </group>
                 </sheet>
                 <!-- chatter -->
@@ -52,9 +58,12 @@
         <field name="model">medismart.appointment</field>
         <field name="arch" type="xml">
             <search string="appointment Search">
-                <field name="date"/>
+                <field name="appointment_date"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
                 <field name="purpose"/>
                 <field name="status"/>
+                <field name="appointment_note" />
                 <!-- filter -->
                 <filter string="General Checkups" name="purpose" domain="[('purpose','=','general_checkup')]"/>
                 <!-- group by -->

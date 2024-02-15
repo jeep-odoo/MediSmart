@@ -18,14 +18,15 @@
         <field name="arch" type="xml">
             <tree string="Doctors">
                 <field name="name"/>
-                <field name="age"/>
-                <field name="gender"/>
+                <field name="specialization_id"/>
                 <field name="experience"/>
+                <field name="age"/>
                 <field name="phone"/>
                 <field name="email"/>
-                <field name="specialization"/>
+                <field name="gender"/>
                 <field name="consultation_fee"/>
-                <field name="availability"/>
+                <field name="availability" optional="hide"/>
+                <field name="joining_date" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -43,23 +44,23 @@
                         <group colspan="2">
                             <group cols="1">
                                 <field name="phone"/>
+                                <field name="email"/>
+                                <field name="age"/>
+                                <field name="gender"/>
+                                <field name="availability"/>
                             </group>
                             <group cols="1">
-                                <field name="email"/>
+                                <field name="specialization_id"/>
+                                <field name="experience"/>
+                                <field name="joining_date"/>
+                                <field name="consultation_fee"/>
                             </group>
                         </group>
                     </group>
-                    <!-- Description Tab -->
+                    <!-- Appointments tab -->
                     <notebook>
-                        <page string="More Information">
-                            <group>
-                                <field name="gender"/>
-                                <field name="specialization"/>
-                                <field name="experience"/>
-                                <field name="age"/>
-                                <field name="consultation_fee"/>
-                                <field name="availability"/>
-                            </group>
+                        <page string="Appointments">
+                            <field name="confirmed_appointment_ids"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -85,13 +86,13 @@
                 <field name="experience"/>
                 <field name="phone"/>
                 <field name="email"/>
-                <field name="specialization"/>
+                <field name="specialization_id"/>
                 <field name="consultation_fee"/>
                 <field name="availability"/>
                 <!-- filter -->
                 <filter string="More Experienced" name="experience" domain="[('experience','&gt;','5')]"/>
                 <!-- group by -->
-                <filter name="specialization" string="Specialization" context="{'group_by': 'specialization'}" />
+                <filter name="specialization_id" string="Specialization_id" context="{'group_by': 'specialization_id'}" />
             </search>
         </field>
     </record>
