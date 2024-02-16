@@ -6,8 +6,10 @@
     'icon' : "assets/icon.png",
     'data': [
         'security/ir.model.access.csv',
+        'views/medismart_patient_tags_views.xml',
         'views/medismart_patient_views.xml',
         'views/medismart_doctor_views.xml',
+        'views/medismart_appointment_tags_views.xml',
         'views/medismart_appointment_views.xml',
         'views/medismart_specialization_views.xml',
         'views/medismart_menus.xml',

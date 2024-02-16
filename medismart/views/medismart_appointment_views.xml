@@ -19,9 +19,11 @@
             <tree string="appointments">
                 <field name="appointment_date"/>
                 <field name="patient_id"/>
+                <field name="patient_phone"/>
                 <field name="doctor_id"/>
                 <field name="purpose"/>
                 <field name="status"/>
+                <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}" optional="hide"/>
                 <field name="appointment_note" optional="hide"/>
             </tree>
         </field>
@@ -36,10 +38,12 @@
                     <group>
                         <field name="appointment_date"/>
                         <field name="patient_id"/>
+                        <field name="patient_phone"/>
                         <field name="doctor_id"/>
                         <field name="purpose"/>
                         <field name="status"/>
-                        <field name="appointment_note" optional="hide"/>
+                        <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
+                        <field name="appointment_note"/>
                     </group>
                 </sheet>
                 <!-- chatter -->
@@ -64,6 +68,8 @@
                 <field name="purpose"/>
                 <field name="status"/>
                 <field name="appointment_note" />
+                <field name="patient_phone"/>
+                <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                 <!-- filter -->
                 <filter string="General Checkups" name="purpose" domain="[('purpose','=','general_checkup')]"/>
                 <!-- group by -->

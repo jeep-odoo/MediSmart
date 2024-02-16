@@ -8,6 +8,8 @@
         <menuitem id="medismart_first_level_menu_appointments" name="Settings">
             <menuitem id="medismart_appointment_menu" name="Appointments" action="medismart_appointment_action"/>
             <menuitem id="medismart_specialization_menu" name="Specializations" action="medismart_specialization_action"/>            
+            <menuitem id="medismart_patient_tag_menu" name="Patient Tags" action="medismart_patient_tag_action"/>            
+            <menuitem id="medismart_appointment_tag_menu" name="Appointment Tags" action="medismart_appointment_tag_action"/>            
         </menuitem>
     </menuitem>
 </odoo>

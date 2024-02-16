@@ -24,6 +24,7 @@
                 <field name="gender"/>
                 <field name="email"/>
                 <field name="notes" optional="hide"/>
+                <field name="patient_tag_ids" optional="hide" widget="many2many_tags" options="{'color_field':'color'}"/>
             </tree>
         </field>
     </record>
@@ -39,6 +40,8 @@
                             <label for="name">Name</label>
                             <field name="name"/>
                         </h1>
+                        <label for="patient_tag_ids">Medical Symptoms</label>
+                        <field name="patient_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                         <group colspan="2">
                             <group cols="1">
                                 <field name="age"/>
@@ -84,6 +87,8 @@
                 <field name="gender"/>
                 <field name="email"/>
                 <field name="notes"/>
+                <field name="patient_tag_ids"/>
+                <field name="patient_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                 <!-- filters -->
                 <filter string="Children" name="age" domain="[('age','&lt;','18')]"/>
                 <filter string="Adults" name="age" domain="[('age','>','18')]"/>

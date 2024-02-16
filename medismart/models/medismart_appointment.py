@@ -6,8 +6,9 @@ class medismartAppointment(models.Model):
     _description = "medismart appointment model"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-
     patient_id = fields.Many2one("medismart.patient", string="Patient", required=True)
+    appointment_tag_ids=fields.Many2many("medismart.appointment.tag", string="What's wrong?" , tracking=True)
+    patient_phone = fields.Char(related='patient_id.phone', string="Phone", readonly=True)
     doctor_id = fields.Many2one("medismart.doctor", string="Doctor", required=True)
     appointment_date = fields.Datetime(default=fields.Datetime.now(), string="Date", tracking=True)
     purpose = fields.Selection(
@@ -35,4 +36,4 @@ class medismartAppointment(models.Model):
         default="draft",
         tracking=True,
     )
-    appointment_note = fields.Text(string = "Note")
+    appointment_note = fields.Text(string="Note")
