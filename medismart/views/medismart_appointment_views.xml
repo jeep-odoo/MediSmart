@@ -34,6 +34,15 @@
         <field name="model">medismart.appointment</field>
         <field name="arch" type="xml">
             <form string="appointments">
+                <header>
+                    <!-- when status is "draft" (default while creating new appointment), take status to "confirmed" by clicking "Confirm" button. Confirm button visible only when status is NOT CANCELED or it is at DRAFT -->
+                    <button name="action_confirm" class="btn-primary" type="object" string="Confirm" invisible="status != 'draft' or status=='cancel'"/>
+                    <!-- when status is "confirmed", take status to "done" by clicking "Done" button. Confirm button visible only when status is NOT CANCELED or it is at CONFIRM -->
+                    <button name="action_done" class="btn-primary" type="object" string="Done" invisible="status != 'confirm' or status == 'cancel'"/>
+                    <!-- when status is ANYTHING except CANCELED, take status to "canceled" by clicking "Cancel" button. Cancel button visible only when status is NOT CANCELED or NOT DONE -->
+                    <button name="action_cancel" type="object" string="Cancel" invisible="status == 'cancel' or status=='done'"/>
+                    <field name="status" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="appointment_date"/>

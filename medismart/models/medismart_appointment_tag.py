@@ -5,6 +5,8 @@ from random import randint
 class medismartAppointmentTag(models.Model):
     _name = "medismart.appointment.tag"
     _description = "Medismart appointment tag model"
+    _order = "name"
+
 
     name = fields.Char(required=True, string="Name")
 

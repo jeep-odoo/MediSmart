@@ -60,7 +60,7 @@
                     <!-- Appointments tab -->
                     <notebook>
                         <page string="Appointments">
-                            <field name="confirmed_appointment_ids"/>
+                            <field name="appointment_ids"/>
                         </page>
                     </notebook>
                 </sheet>

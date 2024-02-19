@@ -6,6 +6,8 @@ class medismartPatient(models.Model):
     _name = "medismart.patient"
     _description = "medismart patient model"
     _inherit = ["mail.thread", "mail.activity.mixin"]
+    _order = "name"
+
 
     name = fields.Char(required=True, string="Name", tracking=True)
     patient_tag_ids = fields.Many2many("medismart.patient.tag", string="Medical Condition" , tracking=True)

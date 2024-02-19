@@ -57,7 +57,7 @@
                     </group>
                     <!-- Prev Appointments Tab Tab -->
                     <notebook>
-                        <page string="Previous Appointments">
+                        <page string="Appointments">
                             <group>
                                 <field name="patient_appointment_ids" />
                             </group>

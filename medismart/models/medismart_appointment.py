@@ -5,6 +5,8 @@ class medismartAppointment(models.Model):
     _name = "medismart.appointment"
     _description = "medismart appointment model"
     _inherit = ["mail.thread", "mail.activity.mixin"]
+    _order = "appointment_date desc"
+
 
     patient_id = fields.Many2one("medismart.patient", string="Patient", required=True)
     appointment_tag_ids=fields.Many2many("medismart.appointment.tag", string="What's wrong?" , tracking=True)
@@ -37,3 +39,21 @@ class medismartAppointment(models.Model):
         tracking=True,
     )
     appointment_note = fields.Text(string="Note")
+    
+    def action_confirm(self):
+        for record in self:
+            if not record.status == "cancel":
+                record.status = "confirm"
+                return True
+
+    def action_done(self):
+        for record in self:
+            if not record.status == "cancel":
+                record.status = "done"
+                return True
+            
+    def action_cancel(self):
+        for record in self:
+            if not record.status == "done":
+                record.status = "cancel"
+                return True

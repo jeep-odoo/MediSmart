@@ -5,6 +5,7 @@ from random import randint
 class medismartPatientTag(models.Model):
     _name = "medismart.patient.tag"
     _description = "Medismart patient tag model"
+    _order = "name"
 
     name = fields.Char(required=True, string="Name")
 
@@ -13,6 +14,4 @@ class medismartPatientTag(models.Model):
 
     color = fields.Integer("Color", default=_get_default_color)
 
-    _sql_constraints = [
-        ("name_unique", "unique(name)", "Patient Tag must be unique")
-    ]
+    _sql_constraints = [("name_unique", "unique(name)", "Patient Tag must be unique")]

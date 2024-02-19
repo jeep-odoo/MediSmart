@@ -29,8 +29,22 @@
             <form string="specializations">
                 <sheet>
                     <h1>
-                        <field name="name"/>
+                        <field name="name" placeholder="Eg: General Physician"/>
                     </h1>
+                    <notebook>
+                        <page string="Doctors">
+                            <field name="doctor_ids">
+                                <tree >
+                                    <field name="name" string="Title" />
+                                    <field name="experience" string="Experience (in years)"/>
+                                    <field name="age" string="Age"/>
+                                    <field name="phone" string="Phone"/>
+                                    <field name="email" string="Email"/>
+                                    <field name="consultation_fee" string="Consultation Fee"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

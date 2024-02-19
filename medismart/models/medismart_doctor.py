@@ -5,6 +5,7 @@ class medismartDoctor(models.Model):
     _name = "medismart.doctor"
     _description = "medismart doctor model"
     _inherit = ["mail.thread", "mail.activity.mixin"]
+    _order = "name"
 
     name = fields.Char(required=True, string="Name", tracking=True, copy=False)
     age = fields.Integer(required=True, string="Age (in years)", tracking=True)
@@ -41,16 +42,16 @@ class medismartDoctor(models.Model):
     )
     joining_date = fields.Date(string="Joining Date", tracking=True)
     appointment_ids = fields.One2many("medismart.appointment", "doctor_id", string=" ")
-    confirmed_appointment_ids = fields.One2many(
-        "medismart.appointment",
-        compute="_compute_confirmed_appointments",
-        string="Confirmed Appointments"
-    )
+    # confirmed_appointment_ids = fields.One2many(
+    #     "medismart.appointment",
+    #     compute="_compute_confirmed_appointments",
+    #     string="Confirmed Appointments"
+    # )
 
     # filtering only the confirmed appointments
-    @api.depends('appointment_ids')
-    def _compute_confirmed_appointments(self):
-        for doctor in self:
-            doctor.confirmed_appointment_ids = doctor.appointment_ids.filtered(
-                lambda appointment: appointment.status == 'confirm'
-            )
+    # @api.depends('appointment_ids')
+    # def _compute_confirmed_appointments(self):
+    #     for doctor in self:
+    #         doctor.confirmed_appointment_ids = doctor.appointment_ids.filtered(
+    #             lambda appointment: appointment.status == 'confirm'
+    #         )
