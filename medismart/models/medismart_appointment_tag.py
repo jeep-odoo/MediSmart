@@ -7,7 +7,6 @@ class medismartAppointmentTag(models.Model):
     _description = "Medismart appointment tag model"
     _order = "name"
 
-
     name = fields.Char(required=True, string="Name")
 
     def _get_default_color(self):
@@ -15,6 +14,4 @@ class medismartAppointmentTag(models.Model):
 
     color = fields.Integer("Color", default=_get_default_color)
 
-    _sql_constraints = [
-        ("name_unique", "unique(name)", "Tag must be unique")
-    ]
+    _sql_constraints = [("name_unique", "unique(name)", "Tag must be unique")]

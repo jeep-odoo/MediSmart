@@ -4,11 +4,43 @@
     <record id="medismart_doctor_action" model="ir.actions.act_window">
         <field name="name">Doctors</field>
         <field name="res_model">medismart.doctor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
             No Data. Let's create some!
           </p>
+        </field>
+    </record>
+    <!-- Kanban view of doctors grouped by specialization -->
+    <record id="medismart_doctor_view_kanban" model="ir.ui.view">
+        <field name="name">medismart.doctor.kanban</field>
+        <field name="model">medismart.doctor</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by='specialization_id' records_draggable='False' quick_create='False' quick_create_view='medismart.doctor.form'>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_card_content">
+                                <div class="o_kanban_record_title">
+                                    <field name="name"/>
+                                </div>
+                                <div>Phone : 
+                                    <field name="phone"/>
+                                </div>
+                                <div>Email : 
+                                    <field name="email"/>
+                                </div>
+                                <div>Gender : 
+                                    <field name="gender"/>
+                                </div>
+                                <div>Fees : 
+                                    <field name="consultation_fee"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
     <!-- tree view of all doctors -->
@@ -57,10 +89,21 @@
                             </group>
                         </group>
                     </group>
-                    <!-- Appointments tab -->
                     <notebook>
+                        <!-- Appointments tab -->
                         <page string="Appointments">
                             <field name="appointment_ids"/>
+                        </page>
+                        <!-- Patients Tab -->
+                        <page string="Patients">
+                            <field name="patient_ids">
+                                <tree string="Patients">
+                                    <field name="name"/>
+                                    <field name="patient_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
+                                    <field name="age"/>
+                                    <field name="gender"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

@@ -4,11 +4,45 @@
     <record id="medismart_appointment_action" model="ir.actions.act_window">
         <field name="name">Appointments</field>
         <field name="res_model">medismart.appointment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
             No Data. Let's create some!
           </p>
+        </field>
+    </record>
+    <!-- Kanban view of appointments grouped by status -->
+    <record id="medismart_appointments_view_kanban" model="ir.ui.view">
+        <field name="name">medismart.appointment.kanban</field>
+        <field name="model">medismart.appointment</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by='status' groups_draggable='True' quick_create='False' >
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_card_content">
+                                <div class="o_kanban_record_title">
+                                    <field name="sequence" />
+                                    <span> - </span>
+                                    <field name="patient_id"/>
+                                </div>
+                                <div>
+                                    <field name="appointment_date"/>
+                                </div>
+                                <div>
+                                    <field name="purpose"/>
+                                </div>
+                                <div>
+                                    <field name="doctor_id"/>
+                                </div>
+                                <div>
+                                    <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
     <!-- tree view of all appointments -->
@@ -17,9 +51,11 @@
         <field name="model">medismart.appointment</field>
         <field name="arch" type="xml">
             <tree string="appointments">
-                <field name="appointment_date"/>
+                <field name="sequence"/>
                 <field name="patient_id"/>
+                <field name="appointment_date"/>
                 <field name="patient_phone"/>
+                <field name="specialization_id"/>
                 <field name="doctor_id"/>
                 <field name="purpose"/>
                 <field name="status"/>
@@ -44,11 +80,17 @@
                     <field name="status" widget="statusbar" statusbar_visible="draft,confirm,done"/>
                 </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="sequence" readonly="1"/>
+                        </h1>
+                    </div>
                     <group>
                         <field name="appointment_date"/>
                         <field name="patient_id"/>
                         <field name="patient_phone"/>
-                        <field name="doctor_id"/>
+                        <field name="specialization_id"/>
+                        <field name="doctor_id" />
                         <field name="purpose"/>
                         <field name="status"/>
                         <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
@@ -78,6 +120,7 @@
                 <field name="status"/>
                 <field name="appointment_note" />
                 <field name="patient_phone"/>
+                <field name="sequence"/>
                 <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                 <!-- filter -->
                 <filter string="General Checkups" name="purpose" domain="[('purpose','=','general_checkup')]"/>

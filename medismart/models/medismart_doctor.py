@@ -27,7 +27,9 @@ class medismartDoctor(models.Model):
         tracking=True,
         required=True,
     )
-    specialization_id = fields.Many2one("medismart.specialization", string="Specialization", tracking=True)
+    specialization_id = fields.Many2one(
+        "medismart.specialization", string="Specialization", tracking=True
+    )
     consultation_fee = fields.Float(string="Consultation Fee", tracking=True)
     availability = fields.Selection(
         string="Availability",
@@ -41,17 +43,20 @@ class medismartDoctor(models.Model):
         tracking=True,
     )
     joining_date = fields.Date(string="Joining Date", tracking=True)
-    appointment_ids = fields.One2many("medismart.appointment", "doctor_id", string=" ")
-    # confirmed_appointment_ids = fields.One2many(
-    #     "medismart.appointment",
-    #     compute="_compute_confirmed_appointments",
-    #     string="Confirmed Appointments"
-    # )
+    appointment_ids = fields.One2many(
+        "medismart.appointment",
+        "doctor_id",
+        string="Appointments",
+        domain=[("status", "=", "confirm")],
+    )
+    patient_ids = fields.Many2many(
+        "medismart.patient",
+        string="Patients",
+        compute="_compute_patient_ids",
+        store=True,
+    )
 
-    # filtering only the confirmed appointments
-    # @api.depends('appointment_ids')
-    # def _compute_confirmed_appointments(self):
-    #     for doctor in self:
-    #         doctor.confirmed_appointment_ids = doctor.appointment_ids.filtered(
-    #             lambda appointment: appointment.status == 'confirm'
-    #         )
+    @api.depends("appointment_ids.patient_id")
+    def _compute_patient_ids(self):
+        for doctor in self:
+            doctor.patient_ids = doctor.appointment_ids.mapped("patient_id")

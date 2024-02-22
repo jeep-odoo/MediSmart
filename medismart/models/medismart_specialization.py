@@ -6,6 +6,7 @@ class medismartSpecialization(models.Model):
     _description = "medismart specialization model"
     _order = "name"
 
-
     name = fields.Char(required=True, string="Specialization")
-    doctor_ids = fields.One2many('medismart.doctor', 'specialization_id', string='Doctors')
+    doctor_ids = fields.One2many(
+        "medismart.doctor", "specialization_id", string="Doctors"
+    )

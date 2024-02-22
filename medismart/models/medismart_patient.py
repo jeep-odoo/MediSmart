@@ -8,9 +8,10 @@ class medismartPatient(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "name"
 
-
     name = fields.Char(required=True, string="Name", tracking=True)
-    patient_tag_ids = fields.Many2many("medismart.patient.tag", string="Medical Condition" , tracking=True)
+    patient_tag_ids = fields.Many2many(
+        "medismart.patient.tag", string="Medical Condition", tracking=True
+    )
     age = fields.Integer(required=True, string="Age (in years)", tracking=True)
     gender = fields.Selection(
         string="Gender",
@@ -24,4 +25,6 @@ class medismartPatient(models.Model):
     notes = fields.Text(
         string="Additonal Notes", tracking=True
     )  # Only doctor should access this
-    patient_appointment_ids = fields.One2many("medismart.appointment","patient_id", string=" " )
+    patient_appointment_ids = fields.One2many(
+        "medismart.appointment", "patient_id", string=" "
+    )

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="medismart_appointment_sequence" model="ir.sequence">
+        <field name="name">Medismart Appointment Sequence</field>
+        <field name="code">medismart.appointment.sequence</field>
+        <field name="prefix">APT/</field>
+        <field name="padding">0001</field>
+    </record>
+</odoo>
