@@ -15,6 +15,9 @@
         'views/medismart_specialization_views.xml',
         'views/medismart_menus.xml',
         ],
+    'demo':[
+        'demo/demo_data.xml',
+    ],
     'application': True,
     'installable': True,
     "license" : "LGPL-3",

@@ -17,6 +17,7 @@ class medismartDoctor(models.Model):
         tracking=True,
     )
     experience = fields.Integer(string="Experience (in yrs)", tracking=True)
+    image = fields.Binary()
     phone = fields.Char(
         string="Phone",
         tracking=True,

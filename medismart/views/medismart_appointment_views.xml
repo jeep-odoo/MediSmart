@@ -21,21 +21,25 @@
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_card oe_kanban_global_click">
                             <div class="oe_kanban_card_content">
-                                <div class="o_kanban_record_title">
+                                <h3>
                                     <field name="sequence" />
                                     <span> - </span>
                                     <field name="patient_id"/>
-                                </div>
+                                </h3>
                                 <div>
+                                    <b>Time: </b>
                                     <field name="appointment_date"/>
                                 </div>
                                 <div>
-                                    <field name="purpose"/>
-                                </div>
-                                <div>
+                                    <b>Doctor: </b>
                                     <field name="doctor_id"/>
                                 </div>
                                 <div>
+                                    <b>Purpose: </b>
+                                    <field name="purpose"/>
+                                </div>
+                                <div>
+                                    <b>What's wrong?</b>
                                     <field name="appointment_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                                 </div>
                             </div>

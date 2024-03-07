@@ -21,19 +21,23 @@
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_card oe_kanban_global_click">
                             <div class="oe_kanban_card_content">
-                                <div class="o_kanban_record_title">
+                                <h3>
                                     <field name="name"/>
-                                </div>
-                                <div>Phone : 
+                                </h3>
+                                <div>
+                                    <b>Phone: </b>
                                     <field name="phone"/>
                                 </div>
-                                <div>Email : 
+                                <div>
+                                    <b>Email: </b>
                                     <field name="email"/>
                                 </div>
-                                <div>Gender : 
+                                <div>
+                                    <b>Gender: </b>
                                     <field name="gender"/>
                                 </div>
-                                <div>Fees : 
+                                <div>
+                                    <b>Fees: </b>
                                     <field name="consultation_fee"/>
                                 </div>
                             </div>
@@ -69,24 +73,23 @@
         <field name="arch" type="xml">
             <form string="Doctors">
                 <sheet>
-                    <group>
-                        <h1>
-                            <field name="name"/>
-                        </h1>
-                        <group colspan="2">
-                            <group cols="1">
-                                <field name="phone"/>
-                                <field name="email"/>
-                                <field name="age"/>
-                                <field name="gender"/>
-                                <field name="availability"/>
-                            </group>
-                            <group cols="1">
-                                <field name="specialization_id"/>
-                                <field name="experience"/>
-                                <field name="joining_date"/>
-                                <field name="consultation_fee"/>
-                            </group>
+                    <h1>
+                        <field name="name" placeholder="Enter Name"/>
+                        <field name="image" widget="image" class="oe_avatar" options="{'size': [200, 200]}" nolabel="1"/>
+                    </h1>
+                    <group colspan="2">
+                        <group cols="1">
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="age"/>
+                            <field name="gender"/>
+                            <field name="availability"/>
+                        </group>
+                        <group cols="1">
+                            <field name="specialization_id"/>
+                            <field name="experience"/>
+                            <field name="joining_date"/>
+                            <field name="consultation_fee"/>
                         </group>
                     </group>
                     <notebook>

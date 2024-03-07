@@ -35,11 +35,11 @@
         <field name="arch" type="xml">
             <form >
                 <sheet>
+                    <h1>
+                        <field name="name" placeholder="Enter Name"/>
+                        <field name="image" widget="image" class="oe_avatar" options="{'size': [200, 200]}" nolabel="1"/>
+                    </h1>
                     <group>
-                        <h1>
-                            <label for="name">Name</label>
-                            <field name="name"/>
-                        </h1>
                         <label for="patient_tag_ids">Medical Symptoms</label>
                         <field name="patient_tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
                         <group colspan="2">

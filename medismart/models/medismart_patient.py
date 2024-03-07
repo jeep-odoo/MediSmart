@@ -12,6 +12,7 @@ class medismartPatient(models.Model):
     patient_tag_ids = fields.Many2many(
         "medismart.patient.tag", string="Medical Condition", tracking=True
     )
+    image = fields.Binary()
     age = fields.Integer(required=True, string="Age (in years)", tracking=True)
     gender = fields.Selection(
         string="Gender",
