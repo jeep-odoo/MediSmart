@@ -4,7 +4,7 @@
     <record id="medismart_appointment_action" model="ir.actions.act_window">
         <field name="name">Appointments</field>
         <field name="res_model">medismart.appointment</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,tree,form,gantt</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
             No Data. Let's create some!
@@ -27,8 +27,8 @@
                                     <field name="patient_id"/>
                                 </h3>
                                 <div>
-                                    <b>Time: </b>
-                                    <field name="appointment_date"/>
+                                    <b>Start Time: </b>
+                                    <field name="start_time"/>
                                 </div>
                                 <div>
                                     <b>Doctor: </b>
@@ -57,7 +57,9 @@
             <tree string="appointments">
                 <field name="sequence"/>
                 <field name="patient_id"/>
-                <field name="appointment_date"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="appointment_period"/>
                 <field name="patient_phone"/>
                 <field name="specialization_id"/>
                 <field name="doctor_id"/>
@@ -90,7 +92,9 @@
                         </h1>
                     </div>
                     <group>
-                        <field name="appointment_date"/>
+                        <field name="start_time"/>
+                        <field name="appointment_period"/>
+                        <field name="end_time"/>
                         <field name="patient_id"/>
                         <field name="patient_phone"/>
                         <field name="specialization_id"/>
@@ -111,13 +115,30 @@
             </form>
         </field>
     </record>
+    <!-- Gantt View -->
+    <record id="medismart_appointments_view_gantt" model="ir.ui.view">
+        <field name="name">medismart.appointment.gantt</field>
+        <field name="model">medismart.appointment</field>
+        <field name="arch" type="xml">
+            <gantt
+                    date_start="start_time"
+                    date_stop="end_time"
+                    default_group_by="specialization_id,doctor_id"
+                    precision="{'day': 'hour:quarter', 'week': 'day:half', 'month': 'day:half', 'year': 'day:full'}"  
+                    color="doctor_id"
+                    default_scale="day"
+                >
+                <field name="status" invisible="1"/>
+            </gantt>
+        </field>
+    </record>
     <!-- Search View -->
     <record id="medismart_appointments_search" model="ir.ui.view">
         <field name="name">medismart.appointment.search</field>
         <field name="model">medismart.appointment</field>
         <field name="arch" type="xml">
             <search string="appointment Search">
-                <field name="appointment_date"/>
+                <field name="start_time"/>
                 <field name="patient_id"/>
                 <field name="doctor_id"/>
                 <field name="purpose"/>

@@ -10,3 +10,5 @@ class medismartSpecialization(models.Model):
     doctor_ids = fields.One2many(
         "medismart.doctor", "specialization_id", string="Doctors"
     )
+
+    _sql_constraints = [("name_unique", "unique(name)", "Patient Tag must be unique")]

@@ -87,7 +87,7 @@
         <field name="age">30</field>
         <field name="gender">male</field>
         <field name="address">123 Main St</field>
-        <field name="phone">123-456-7890</field>
+        <field name="phone">1234567890</field>
         <field name="email">john@example.com</field>
         <field name="notes">Patient has a history of allergies.</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_1'), ref('medismart_patient_tag_2')])]"/>
@@ -98,7 +98,7 @@
         <field name="age">25</field>
         <field name="gender">female</field>
         <field name="address">456 Oak St</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">9876543210</field>
         <field name="email">jane@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_3'), ref('medismart_patient_tag_4')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -108,7 +108,7 @@
         <field name="age">35</field>
         <field name="gender">female</field>
         <field name="address">789 Pine St</field>
-        <field name="phone">456-789-0123</field>
+        <field name="phone">4567890123</field>
         <field name="email">alice@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_5'), ref('medismart_patient_tag_6')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -118,7 +118,7 @@
         <field name="age">40</field>
         <field name="gender">male</field>
         <field name="address">321 Elm St</field>
-        <field name="phone">789-012-3456</field>
+        <field name="phone">7890123456</field>
         <field name="email">michael@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_7'), ref('medismart_patient_tag_8')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -128,7 +128,7 @@
         <field name="age">28</field>
         <field name="gender">female</field>
         <field name="address">567 Maple St</field>
-        <field name="phone">012-345-6789</field>
+        <field name="phone">0123456789</field>
         <field name="email">emily@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_9'), ref('medismart_patient_tag_10')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -138,7 +138,7 @@
         <field name="age">32</field>
         <field name="gender">male</field>
         <field name="address">901 Cedar St</field>
-        <field name="phone">234-567-8901</field>
+        <field name="phone">2345678901</field>
         <field name="email">daniel@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_11'), ref('medismart_patient_tag_12')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -148,7 +148,7 @@
         <field name="age">27</field>
         <field name="gender">female</field>
         <field name="address">345 Walnut St</field>
-        <field name="phone">345-678-9012</field>
+        <field name="phone">3456789012</field>
         <field name="email">sophia@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_13'), ref('medismart_patient_tag_14')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -158,7 +158,7 @@
         <field name="age">38</field>
         <field name="gender">male</field>
         <field name="address">678 Oak St</field>
-        <field name="phone">567-890-1234</field>
+        <field name="phone">5678901234</field>
         <field name="email">william@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_15'), ref('medismart_patient_tag_16')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -168,7 +168,7 @@
         <field name="age">31</field>
         <field name="gender">female</field>
         <field name="address">234 Pine St</field>
-        <field name="phone">678-901-2345</field>
+        <field name="phone">6789012345</field>
         <field name="email">olivia@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_17'), ref('medismart_patient_tag_18')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -178,7 +178,7 @@
         <field name="age">29</field>
         <field name="gender">male</field>
         <field name="address">890 Elm St</field>
-        <field name="phone">789-012-3456</field>
+        <field name="phone">7890123456</field>
         <field name="email">ethan@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_19'), ref('medismart_patient_tag_20')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -188,7 +188,7 @@
         <field name="age">45</field>
         <field name="gender">female</field>
         <field name="address">789 Cedar St</field>
-        <field name="phone">123-456-7890</field>
+        <field name="phone">1234567890</field>
         <field name="email">sophie@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_1'), ref('medismart_patient_tag_2')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -198,7 +198,7 @@
         <field name="age">35</field>
         <field name="gender">male</field>
         <field name="address">456 Oak St</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">9876543210</field>
         <field name="email">lucas@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_3'), ref('medismart_patient_tag_4')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -208,7 +208,7 @@
         <field name="age">30</field>
         <field name="gender">female</field>
         <field name="address">123 Pine St</field>
-        <field name="phone">456-789-0123</field>
+        <field name="phone">4567890123</field>
         <field name="email">emma@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_5'), ref('medismart_patient_tag_6')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -218,7 +218,7 @@
         <field name="age">28</field>
         <field name="gender">male</field>
         <field name="address">567 Elm St</field>
-        <field name="phone">012-345-6789</field>
+        <field name="phone">0123456789</field>
         <field name="email">liam@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_7'), ref('medismart_patient_tag_8')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -228,7 +228,7 @@
         <field name="age">32</field>
         <field name="gender">female</field>
         <field name="address">901 Maple St</field>
-        <field name="phone">234-567-8901</field>
+        <field name="phone">2345678901</field>
         <field name="email">mia@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_9'), ref('medismart_patient_tag_10')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -238,7 +238,7 @@
         <field name="age">27</field>
         <field name="gender">male</field>
         <field name="address">345 Walnut St</field>
-        <field name="phone">345-678-9012</field>
+        <field name="phone">3456789012</field>
         <field name="email">noah@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_11'), ref('medismart_patient_tag_12')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -248,7 +248,7 @@
         <field name="age">38</field>
         <field name="gender">female</field>
         <field name="address">678 Oak St</field>
-        <field name="phone">567-890-1234</field>
+        <field name="phone">5678901234</field>
         <field name="email">ava@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_13'), ref('medismart_patient_tag_14')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -258,7 +258,7 @@
         <field name="age">31</field>
         <field name="gender">male</field>
         <field name="address">234 Pine St</field>
-        <field name="phone">678-901-2345</field>
+        <field name="phone">6789012345</field>
         <field name="email">logan@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_15'), ref('medismart_patient_tag_16')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -268,7 +268,7 @@
         <field name="age">29</field>
         <field name="gender">female</field>
         <field name="address">890 Elm St</field>
-        <field name="phone">789-012-3456</field>
+        <field name="phone">7890123456</field>
         <field name="email">chloe@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_17'), ref('medismart_patient_tag_18')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -278,7 +278,7 @@
         <field name="age">33</field>
         <field name="gender">male</field>
         <field name="address">678 Maple St</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">9876543210</field>
         <field name="email">benjamin@example.com</field>
         <field name="patient_tag_ids" eval="[(6, 0, [ref('medismart_patient_tag_19'), ref('medismart_patient_tag_20')])]"/>
         <field name="image" type="base64" file="medismart/static/img/patient.jpg"/>
@@ -308,7 +308,7 @@
         <field name="name">Dr. Smith</field>
         <field name="age">40</field>
         <field name="gender">male</field>
-        <field name="phone">123-456-7890</field>
+        <field name="phone">8456762341</field>
         <field name="email">smith@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="experience">15</field>
@@ -320,7 +320,7 @@
         <field name="name">Dr. Johnson</field>
         <field name="age">35</field>
         <field name="gender">female</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">8456762342</field>
         <field name="email">johnson@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="experience">10</field>
@@ -332,7 +332,7 @@
         <field name="name">Dr. Anderson</field>
         <field name="age">45</field>
         <field name="gender">male</field>
-        <field name="phone">111-222-3333</field>
+        <field name="phone">8456762343</field>
         <field name="email">anderson@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="experience">20</field>
@@ -345,7 +345,7 @@
         <field name="name">Dr. Martinez</field>
         <field name="age">38</field>
         <field name="gender">male</field>
-        <field name="phone">444-555-6666</field>
+        <field name="phone">8456762344</field>
         <field name="email">martinez@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="experience">12</field>
@@ -357,7 +357,7 @@
         <field name="name">Dr. Kim</field>
         <field name="age">42</field>
         <field name="gender">female</field>
-        <field name="phone">777-888-9999</field>
+        <field name="phone">8456762345</field>
         <field name="email">kim@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="experience">18</field>
@@ -369,7 +369,7 @@
         <field name="name">Dr. Patel</field>
         <field name="age">37</field>
         <field name="gender">male</field>
-        <field name="phone">555-666-7777</field>
+        <field name="phone">8456762346</field>
         <field name="email">patel@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="experience">15</field>
@@ -382,7 +382,7 @@
         <field name="name">Dr. Williams</field>
         <field name="age">42</field>
         <field name="gender">male</field>
-        <field name="phone">111-222-3333</field>
+        <field name="phone">8456762347</field>
         <field name="email">williams@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="experience">18</field>
@@ -394,7 +394,7 @@
         <field name="name">Dr. Garcia</field>
         <field name="age">36</field>
         <field name="gender">female</field>
-        <field name="phone">444-555-6666</field>
+        <field name="phone">8456762348</field>
         <field name="email">garcia@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="experience">13</field>
@@ -406,7 +406,7 @@
         <field name="name">Dr. Nguyen</field>
         <field name="age">39</field>
         <field name="gender">male</field>
-        <field name="phone">777-888-9999</field>
+        <field name="phone">8456762349</field>
         <field name="email">nguyen@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="experience">16</field>
@@ -419,7 +419,7 @@
         <field name="name">Dr. Brown</field>
         <field name="age">43</field>
         <field name="gender">male</field>
-        <field name="phone">123-456-7890</field>
+        <field name="phone">8456762350</field>
         <field name="email">brown@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="experience">19</field>
@@ -431,7 +431,7 @@
         <field name="name">Dr. Taylor</field>
         <field name="age">34</field>
         <field name="gender">female</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">8456762351</field>
         <field name="email">taylor@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="experience">11</field>
@@ -443,7 +443,7 @@
         <field name="name">Dr. Rodriguez</field>
         <field name="age">41</field>
         <field name="gender">male</field>
-        <field name="phone">111-222-3333</field>
+        <field name="phone">8456762352</field>
         <field name="email">rodriguez@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="experience">17</field>
@@ -456,7 +456,7 @@
         <field name="name">Dr. Hernandez</field>
         <field name="age">39</field>
         <field name="gender">female</field>
-        <field name="phone">123-456-7890</field>
+        <field name="phone">8456762353</field>
         <field name="email">hernandez@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_5"/>
         <field name="experience">16</field>
@@ -468,7 +468,7 @@
         <field name="name">Dr. Wilson</field>
         <field name="age">37</field>
         <field name="gender">male</field>
-        <field name="phone">987-654-3210</field>
+        <field name="phone">8456762354</field>
         <field name="email">wilson@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_5"/>
         <field name="experience">14</field>
@@ -481,7 +481,7 @@
         <field name="name">Dr. Lee</field>
         <field name="age">44</field>
         <field name="gender">male</field>
-        <field name="phone">111-222-3333</field>
+        <field name="phone">8456762355</field>
         <field name="email">lee@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_6"/>
         <field name="experience">19</field>
@@ -493,7 +493,7 @@
         <field name="name">Dr. Lewis</field>
         <field name="age">33</field>
         <field name="gender">female</field>
-        <field name="phone">444-555-6666</field>
+        <field name="phone">8456762356</field>
         <field name="email">lewis@example.com</field>
         <field name="specialization_id" ref="medismart_specialization_6"/>
         <field name="experience">10</field>
@@ -587,7 +587,8 @@
         <field name="patient_id" ref="medismart_patient_1"/>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="doctor_id" ref="medismart_doctor_1"/>
-        <field name="appointment_date">2024-02-10</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">general_checkup</field>
         <field name="status">draft</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_1'), ref('medismart_appointment_tag_2')])]"/>
@@ -596,7 +597,8 @@
         <field name="patient_id" ref="medismart_patient_2"/>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="doctor_id" ref="medismart_doctor_4"/>
-        <field name="appointment_date">2024-02-15</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">follow_up_visit</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_3'), ref('medismart_appointment_tag_4')])]"/>
@@ -605,7 +607,8 @@
         <field name="patient_id" ref="medismart_patient_3"/>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="doctor_id" ref="medismart_doctor_7"/>
-        <field name="appointment_date">2024-02-20</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">surgical_consultation</field>
         <field name="status">done</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_5'), ref('medismart_appointment_tag_6')])]"/>
@@ -614,7 +617,8 @@
         <field name="patient_id" ref="medismart_patient_4"/>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="doctor_id" ref="medismart_doctor_10"/>
-        <field name="appointment_date">2024-02-12</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">maternity_care</field>
         <field name="status">cancel</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_7'), ref('medismart_appointment_tag_8')])]"/>
@@ -623,7 +627,8 @@
         <field name="patient_id" ref="medismart_patient_5"/>
         <field name="specialization_id" ref="medismart_specialization_5"/>
         <field name="doctor_id" ref="medismart_doctor_13"/>
-        <field name="appointment_date">2024-02-18</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">emergency_care</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_9'), ref('medismart_appointment_tag_10')])]"/>
@@ -632,7 +637,8 @@
         <field name="patient_id" ref="medismart_patient_6"/>
         <field name="specialization_id" ref="medismart_specialization_6"/>
         <field name="doctor_id" ref="medismart_doctor_16"/>
-        <field name="appointment_date">2024-02-14</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">general_checkup</field>
         <field name="status">done</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_11'), ref('medismart_appointment_tag_12')])]"/>
@@ -641,7 +647,8 @@
         <field name="patient_id" ref="medismart_patient_7"/>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="doctor_id" ref="medismart_doctor_1"/>
-        <field name="appointment_date">2024-02-17</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">follow_up_visit</field>
         <field name="status">draft</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_13'), ref('medismart_appointment_tag_14')])]"/>
@@ -650,7 +657,8 @@
         <field name="patient_id" ref="medismart_patient_8"/>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="doctor_id" ref="medismart_doctor_2"/>
-        <field name="appointment_date">2024-02-19</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">surgical_consultation</field>
         <field name="status">cancel</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_15'), ref('medismart_appointment_tag_16')])]"/>
@@ -659,7 +667,8 @@
         <field name="patient_id" ref="medismart_patient_9"/>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="doctor_id" ref="medismart_doctor_8"/>
-        <field name="appointment_date">2024-02-11</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">follow_up_visit</field>
         <field name="status">done</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_17'), ref('medismart_appointment_tag_18')])]"/>
@@ -668,7 +677,8 @@
         <field name="patient_id" ref="medismart_patient_10"/>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="doctor_id" ref="medismart_doctor_12"/>
-        <field name="appointment_date">2024-02-16</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">general_checkup</field>
         <field name="status">cancel</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_19'), ref('medismart_appointment_tag_20')])]"/>
@@ -677,7 +687,8 @@
         <field name="patient_id" ref="medismart_patient_11"/>
         <field name="specialization_id" ref="medismart_specialization_5"/>
         <field name="doctor_id" ref="medismart_doctor_14"/>
-        <field name="appointment_date">2024-02-21</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">surgical_consultation</field>
         <field name="status">draft</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_1'), ref('medismart_appointment_tag_2')])]"/>
@@ -686,7 +697,8 @@
         <field name="patient_id" ref="medismart_patient_12"/>
         <field name="specialization_id" ref="medismart_specialization_6"/>
         <field name="doctor_id" ref="medismart_doctor_16"/>
-        <field name="appointment_date">2024-02-13</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">maternity_care</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_3'), ref('medismart_appointment_tag_4')])]"/>
@@ -695,7 +707,8 @@
         <field name="patient_id" ref="medismart_patient_13"/>
         <field name="specialization_id" ref="medismart_specialization_1"/>
         <field name="doctor_id" ref="medismart_doctor_3"/>
-        <field name="appointment_date">2024-02-22</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">emergency_care</field>
         <field name="status">done</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_5'), ref('medismart_appointment_tag_6')])]"/>
@@ -704,7 +717,8 @@
         <field name="patient_id" ref="medismart_patient_14"/>
         <field name="specialization_id" ref="medismart_specialization_2"/>
         <field name="doctor_id" ref="medismart_doctor_9"/>
-        <field name="appointment_date">2024-02-24</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">follow_up_visit</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_7'), ref('medismart_appointment_tag_8')])]"/>
@@ -713,7 +727,8 @@
         <field name="patient_id" ref="medismart_patient_15"/>
         <field name="specialization_id" ref="medismart_specialization_3"/>
         <field name="doctor_id" ref="medismart_doctor_8"/>
-        <field name="appointment_date">2024-02-27</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">surgical_consultation</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_9'), ref('medismart_appointment_tag_10')])]"/>
@@ -722,7 +737,8 @@
         <field name="patient_id" ref="medismart_patient_16"/>
         <field name="specialization_id" ref="medismart_specialization_4"/>
         <field name="doctor_id" ref="medismart_doctor_11"/>
-        <field name="appointment_date">2024-02-28</field>
+        <field name="start_time" eval="'2024-03-10 09:00:00'"/>
+        <field name="end_time" eval="'2024-03-10 09:20:00'"/>
         <field name="purpose">general_checkup</field>
         <field name="status">confirm</field>
         <field name="appointment_tag_ids" eval="[(6, 0, [ref('medismart_appointment_tag_11'), ref('medismart_appointment_tag_12')])]"/>

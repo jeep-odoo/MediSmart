@@ -11,19 +11,25 @@
           </p>
         </field>
     </record>
-    <!-- Kanban view of doctors grouped by specialization -->
+    <!-- Kanban view of doctors -->
     <record id="medismart_doctor_view_kanban" model="ir.ui.view">
         <field name="name">medismart.doctor.kanban</field>
         <field name="model">medismart.doctor</field>
         <field name="arch" type="xml">
-            <kanban default_group_by='specialization_id' records_draggable='False' quick_create='False' quick_create_view='medismart.doctor.form'>
+            <kanban records_draggable='False' quick_create_view='medismart.doctor.form'>
                 <templates>
                     <t t-name="kanban-box">
-                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
-                            <div class="oe_kanban_card_content">
-                                <h3>
+                        <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                            <div class="o_kanban_image_fill_left ">
+                                <img alt="Doctor image" t-att-src="kanban_image('medismart.doctor', 'image', record.id.raw_value)"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <h3 style="margin-bottom:1px;">
                                     <field name="name"/>
                                 </h3>
+                                <div style="margin-bottom:7px;">
+                                    <field name="specialization_id"/>
+                                </div>
                                 <div>
                                     <b>Phone: </b>
                                     <field name="phone"/>
